@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfect Trip - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: linear-gradient(135deg, #a0e9ff, #f9f9f9);
+      --card: #ffffff;
+      --accent: #4facfe;
+      --shadow: 0 10px 25px rgba(0,0,0,0.1);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .login-container {
+      background: var(--card);
+      padding: 45px 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      width: 350px;
+      text-align: center;
+      animation: fadeIn 0.8s ease;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #111;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: var(--radius);
+      outline: none;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 8px rgba(79,172,254,0.3);
+    }
+
+    .btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: var(--radius);
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 12px 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .social-login {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .social-btn {
+      flex: 1;
+      padding: 10px;
+      border-radius: var(--radius);
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 13px;
+      color: #333;
+      background-color: #fafafa;
+    }
+
+    .social-btn:hover {
+      background: #f2f2f2;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 400px) {
+      .login-container {
+        width: 90%;
+        padding: 35px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+    <p>Log in to access your Perfect Trip account</p>
+
+    <form>
+      <input type="email" placeholder="Email ID" required />
+      <input type="password" placeholder="Password" required />
+
+      <div class="options">
+        <a href="#">Forgot Password?</a>
+        <a href="#">Create Account</a>
+      </div>
+
+      <button class="btn" type="button" onclick="window.location.href='dashboard.html'">Login</button>
+    </form>
+
+    <div class="social-login">
+      <div class="social-btn">Login with Google</div>
+      <div class="social-btn">Login with Apple</div>
+    </div>
+  </div>
+
+</body>
+</html>
